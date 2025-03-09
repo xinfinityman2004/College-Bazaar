@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notification Bar</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="notification-container">
+    <div class="bell-icon" id="bellIcon">
+      <i class="fas fa-bell"></i>
+      <span class="notification-count" id="notificationCount">3</span>
+    </div>
+    <div class="dropdown" id="dropdownMenu">
+      <ul>
+        <li>Your Order Is Confirmed.</li>
+        <li>Your Meeting Location In CB 5th Floor ,Room No-503,Time- 4PM.</li>
+        <li>You Succesfully Get the Ordered Item.</li>
+        <li>Someone Want to Buy Your Laptop.</li>
+      </ul>
+      <div class="clear-all" id="clearAll">Clear All Notifications</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
