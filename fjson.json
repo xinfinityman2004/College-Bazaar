@@ -1,0 +1,10 @@
+{
+    "name": "CollegeBazaar NFT #1",
+    "description": "A limited edition NFT from CollegeBazaar platform.",
+    "image": "https://example.com/nft1.png",
+    "attributes": [
+      { "trait_type": "Category", "value": "Electronics" },
+      { "trait_type": "Condition", "value": "Like New" }
+    ]
+  }
+  
