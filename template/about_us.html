@@ -1,0 +1,157 @@
+{% extends 'new_dashboard.html' %}
+
+{% block title %}
+  About us
+{% endblock title %}
+{% block content %}
+
+<head>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f2f5;
+            color: #1E3A8A;
+            margin: 0;
+            padding: 0; /* Adjusted to remove padding */
+        }
+
+        .header1 {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px; /* Added to give space below the navbar */
+        }
+
+        .content-container {
+            background: #fff;
+            padding: 20px;
+            border: 2px solid #1E3A8A;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .highlight {
+            color: #3B82F6;
+            font-weight: bold;
+        }
+
+        .team-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .team-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            background: #fff;
+            border: 2px solid #1E3A8A;
+            border-radius: 12px;
+            padding: 15px;
+            width: 500px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 2px solid #3B82F6;
+        }
+
+        .team-member h3 {
+            margin: 5px 0 3px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .team-member p {
+            margin: 0;
+            font-size: 14px;
+            color: #3B82F6;
+        }
+
+        .team-member ul {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header1">
+        <h1>About Us</h1>
+        <h2>We are committed to excellence and driving innovation forward.</h2>
+    </div>
+
+    <div class="content-container">
+        <h2 style="text-align: center;">Our Story</h2>
+        <div class="content-container">
+            <h2 class="content-container1">Welcome to College Bazaar</h2>
+
+            <h3>Our Mission:</h3>
+            <ul>
+                <li>&#8226; Buy, sell and exchange essential items within their campus community.</li>
+                <li>&#8226; Simplify student life by providing a secure and efficient marketplace.</li>
+            </ul>
+
+            <h3>Focus on items such as:</h3>
+            <ul>
+                <li>&#8226; Textbooks</li>
+
+
+
+
+                <li>&#8226; Electronics</li>
+
+                <li>&#8226; Accessories</li>
+
+                <li>&#8226; And much more.</li>
+
+            </ul>
+
+            <h3>Our Values:</h3>
+            <ul>
+                <li>&#8226; Fostering connections among students.</li>
+                <li>&#8226; Promoting sustainable practices through reusing items.</li>
+                <li>&#8226; Empowering individuals to make smart, cost-effective choices.</li>
+            </ul>
+
+            <h3>Regardless Whether you are:</h3>
+            <ul>
+                <li>&#8226; Looking for a great deal.</li>
+                <li>&#8226; Finding a new home for your pre-loved items.</li>
+            </ul>
+            <h4>College Bazaar is here to help you every step of the way.</h4>
+        </div>
+    </div>
+
+    <div class="team-section">
+        <h2>Contact us</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <h3>Wahidur Rahaman</h3>
+                <ul>
+                    <li>&#8226; Gmail: wahidur.rahaman.aiml27@heritageit.edu.in</li>
+                    <li>&#8226; Phone No: +918479831426</li>
+                </ul>
+                <p>Member</p>
+            </div>
+            <div class="team-member">
+                <h3>Koushik Dhar</h3>
+                <ul>
+                    <li>&#8226; Gmail: koushik.dhar.ece27@heritageit.edu.in</li>
+                    <li>&#8226; Phone No: +919064248864</li>
+                </ul>
+                <p>Member</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock content %}
