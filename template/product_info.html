@@ -1,0 +1,113 @@
+
+{% extends 'new_dashboard.html' %}
+
+{% block title %}
+    {{ row_val.prod_name }}
+{% endblock title %}
+
+{% block content %}
+
+<style>
+    .body1 {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh; /* Reduced by 10% */
+        margin: 0;
+        padding: 20px;
+    }
+    .product-container1{
+         text-align: center;
+        margin-bottom: 15px;
+    }
+
+
+    .product-container {
+        background: #ffffff;
+        border: 2px solid #1E3A8A;
+        border-radius: 15px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 355px; /* Increased by 30% */
+        width: 100%;
+
+
+    }
+
+    .product-details {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .product-image {
+        width: 50%;
+        border-radius: 10px;
+        margin-top: 8px;
+    }
+
+    .form-container label {
+        display: block;
+        margin-top: 8px;
+        font-weight: 600;
+    }
+
+    .form-container input,
+    .form-container select,
+    .form-container button {
+        width: 100%;
+        padding: 6px;
+        margin-top: 4px;
+        border: 1px solid #1E3A8A;
+        border-radius: 6px;
+    }
+
+    .form-container button {
+        background-color: #1E3A8A;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin-top: 12px;
+        transition: background 0.3s ease;
+    }
+
+    .form-container button:hover {
+        background-color: #3B82F6;
+    }
+</style>
+
+<div class="body1">
+    <div class="product-container">
+        <h1 class="product-container1">Product Info</h1>
+        <div class="product-details">
+            <p><strong>Name:</strong> {{ row_val.prod_name }}</p>
+            <p><strong>Price:</strong> {{ row_val.prod_price }}</p>
+            <img src="{{ url_for('static', filename='uploads/' ~ row_val.image_name) }}" alt="Product Image" class="product-image">
+        </div>
+
+        <form action="#" method="POST" class="form-container">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="location">Location:</label>
+            <select id="location" name="location" required>
+                <option value="CB504">CB504</option>
+                <option value="Library">Library</option>
+                <option value="ICT201">ICT201</option>
+                <option value="CME304">CME304</option>
+                <option value="Main Canteen">Main Canteen</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+{% endblock content %}
