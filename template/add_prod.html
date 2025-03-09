@@ -1,0 +1,91 @@
+{% extends 'new_dashboard.html' %}
+{% block title %}
+    Add Product
+{% endblock title %}
+{% block content %}
+
+    {% with messages=get_flashed_messages() %}
+        {% if messages %}
+            <script>
+                alert("{{messages[0]}}");
+            </script>
+        {% endif %}
+    {% endwith %}
+
+    <style>
+        /* Simple and professional styling */
+        .body1 {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form1 {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="file"] {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 40px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 40px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        br {
+            display: none; /* Remove extra <br> spacing */
+        }
+    </style>
+    <div class="body1">
+    <form class="form1" action="#" method="post" enctype="multipart/form-data">
+        <label for="prod_name">Product Name:</label>
+        <input type="text" name="prod_name" id="prod_name" required>
+
+        <label for="prod_price">Price:</label>
+        <input type="number" name="prod_price" id="prod_price" required>
+
+        <label for="image">Upload Image:</label>
+        <input type="file" name="image" id="image" accept="image/*" required>
+
+        <input type="submit" value="Add Product">
+    </form>
+    </div>
+
+
+{% endblock content %}
