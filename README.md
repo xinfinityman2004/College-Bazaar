@@ -59,9 +59,7 @@ We welcome contributions! To get started:
 - Commit your changes and push to your branch.
 - Submit a pull request for review.
 
-## License
 
-This project is licensed under the [MIT License](LICENSE).
 
 ## Team
 
