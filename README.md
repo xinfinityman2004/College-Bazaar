@@ -1,6 +1,6 @@
 # College Bazaar
 
-![College Bazaar](https://your-image-link.com/banner.png)  
+
 **Live Website:** [College Bazaar Live](https://collegebaazar4.pythonanywhere.com/)
 
 ## 📌 Overview
